@@ -1,0 +1,95 @@
+Home Page / JS level 10/10
+    X Section Titles
+    X Display 12 movies in horizontal scroller
+        X If no sort filter/default to Popular
+        X Display scroll section based off sort filter
+    ? Spotlight feature "advertisement"
+        > this is used on other pages, could be standalone task 
+
+About Page / JS level 2/10
+    - Description about the website
+    - Instructions on how to use
+    - External links to social media
+    - Big logo that also links back to home page
+
+Favourites Page / JS level 10/10
+    - Does Not Have Favourites
+        > Message notifying user they have no favourites
+        > Instructions on how to make a movie a favourite
+        > Link back to homepage
+
+    - Does Have Favourites 
+        > Display only the movies favourited
+        > Can be either in horizontal scrolls (12 per scroll on desktop and 6 per scroll on mobile) or vertical scrolls.
+
+
+Watch Later / JS level 10/10
+    - Does Not Have Favourites
+        > Message notifying user they have nothing in their watch later list
+        > Instructions on how to add a movie to the watch list
+        > Link back to homepage
+
+    - Does Have Favourites 
+        > Display only the movies selected to "watch later"
+        > Can be either in horizontal or vertical scrolls but should be consistent with favourites.
+
+
+Single Movie Page / JS level 8/10
+    - Display Movie Poster
+    - Display Movie Title
+    - Display Release Date
+    - Display Synopsis
+
+    MAYBE
+    - Display MPA film rating system (rate PG etc.)
+    - Display Runtime
+    - Display cast, or top 6(?) cast members
+    - Display director?
+
+
+Movie Cards & Hover / JS level 8/10
+    X Display State
+        X Display Movie Poster
+        X Display Title
+    
+    - Hover State
+        X Make it spew green acid slime sparkles (Disney meats Nickelodeon effect)
+        X Display overlay screen in front of movie poster (or movie poster with an opacity)
+        X Display Movie Title
+        X Display Release Date (maybe not?)
+        X Display Synopsis
+        > Button for more info
+        > Button to make favourite
+        > Button to add to watch list
+        > ??? Button to watch trailer (if API data exists) ???
+
+
+Spotlight Feature / JS level 7/10
+    - Display carousel of top 3 popular movies
+    - ??? MAYBE a couple humorous mock ads for added realism (Adam Hauck Tax Services, CKO-Brew, Master Chef Mike, DJson)
+
+
+X - Header/Nav / JS level 5/10
+    X logo
+    X hamburger menu on mobile
+    X sort filter on desktop
+
+
+X - Hamburger Menu / JS level 10/10
+    X Links to: 
+        X Home
+          X Sort Filter
+            x popular
+            x top
+            x upcoming
+            x now playing    
+        X About
+        X Favourites
+        X Watch Later
+
+
+X - Sort/Filter Menu / JS level 7/10
+    X popular
+    X top
+    X upcoming
+    X now playing    

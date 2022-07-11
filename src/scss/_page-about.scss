@@ -1,0 +1,140 @@
+@use 'variables' as varis;
+
+.about-page {
+    position: absolute;
+    z-index: 10;
+    min-width: 100vw;
+    margin: 0 auto;
+    max-width: 1700px;
+    h2 {
+        font-family: 'Khand', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #68E028;
+        text-align: center;
+        margin: 4.25rem 0 0 0;
+    }
+}
+
+.about-bg {
+    -webkit-mask-image:-webkit-gradient(linear, right top, left top, from(rgba(0,0,0,.35)), to(rgba(0,0,0,0)));
+    position: fixed;
+    object-fit:cover;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: .25;
+    z-index: 1;
+    pointer-events: none;
+
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+         }
+    }
+
+}
+.about-about {
+    
+    text-align: center;
+
+    .tmbd {
+        width: 150px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+}
+
+.about-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+
+    h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    h2 {
+        text-align: center;
+        font-weight: 400;
+        color: varis.$green;
+        text-transform: uppercase;
+        margin: 2rem 0 0 0;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .logo {
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .about-socials {
+        display: flex;
+        justify-content: center;
+        a{
+            z-index: 1;
+        }
+
+        .fa-icon {
+            margin: 10px;
+            color: white;
+        }
+
+        .fa-icon:hover {
+            color: varis.$orange;
+        }
+    }
+}
+
+@media (min-width: 850px){
+
+    .about-page {
+        h2 {
+            text-align: left;
+            margin-left: 12%;
+            margin-top: 3.25rem;
+            }
+    }
+
+    .about-about {
+    
+        text-align: left;
+    
+        h2 {
+            margin: 2rem 0 0 0;
+            text-align: left ;
+        }
+    }
+
+    .about-wrapper {
+        width: 600px;
+        margin-left: 12%;
+        h1, p {
+            text-align: left;
+        }
+
+        .logo {
+            display: inline;
+        }
+
+        .about-socials {
+            justify-content: flex-start;
+        }
+
+    }
+}
+

@@ -1,0 +1,48 @@
+@use "variables" as *;
+
+.home-page {
+    max-width: 1700px;
+    margin: 0 auto;
+    h1 {
+        text-align: center;
+        margin: 4.25rem 0 1rem 0;
+    }
+}
+
+@media (min-width: 850px) {
+    .hamburger-wrapper,
+    .ham-icon {
+        display: none;
+    }
+
+    .ham-tab {
+        margin-bottom: 25px;
+    }
+
+    .home-page {
+        h1 {
+        text-align: left;
+        margin-left: 12%;
+        margin-top: 1rem;
+        }
+    }
+}
+
+.side-fade {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 20%;
+    z-index: 6000;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 5%, rgba(0,0,0,1) 85%);
+}
+
+@media (min-width: 850px) {
+    .side-fade {
+        background: linear-gradient(90deg, rgba(0,0,0,0) 8%, rgba(0,0,0,1) 60%);
+        width: 12%;
+    }
+}

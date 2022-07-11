@@ -1,0 +1,54 @@
+.fav-page {
+    max-width: 1700px;
+    margin: 3.35rem auto 0 auto;
+    h1 {
+        text-align: center;
+        margin: 4.25rem 0 1rem 0;
+    }
+}
+
+.favs-movie-container {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 30px 0 60px 12%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: rows;
+
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar {
+        height: 5px;
+        display: none;
+    }
+       
+    &::-webkit-scrollbar-thumb {
+        background-color: #68E028;
+        
+    }
+
+}
+
+@media (min-width: 850px) { 
+    .fav-page {
+        h1 {
+            text-align: left;
+            margin-left: 12%;
+            margin-top: 2.5rem;
+            }
+    }   
+    .favs-movie-container {
+        height: auto;
+        flex-direction: unset;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+        row-gap: 50px;
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    .fade-hide {
+        display: none;
+    }
+}

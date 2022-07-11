@@ -1,0 +1,141 @@
+@use "variables" as *;
+
+.ham-hide {
+    display: none;
+}
+
+.ham-show {
+    display: block;
+}
+
+.hamburger-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+}
+
+.ham-nav {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: white;
+    background: linear-gradient(0deg, #fff 99%, #e0e0e0 100%);
+    display: block;
+    width: 150px;
+    height: 361px;
+    margin: 0 auto;
+
+    h2 {
+        font-size: 1rem;
+        color: darkgray;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: $blue;
+        text-decoration: none;
+    
+        &:hover {
+            color: $green;
+        }
+    }
+
+    ul {
+        width: 128px;
+        margin: 0 auto;
+        padding: 10px 0;
+        list-style: none;
+        text-decoration: none;
+        text-align: center;
+        
+        li {
+            font-size: 18px;
+            margin: 10px auto;
+        }
+        
+    }
+    
+    ul:nth-child(2) {
+        background-color: $green;
+        width: 140px;
+        margin: 0 auto;
+        text-align: center;
+
+        li {
+        }
+
+        .search-bar {
+            transform: skew(-10deg);
+            border: 2px solid #68e028;
+            border-radius: 5px;
+            width: 120px;
+            margin: 0 auto;
+        }
+    }
+
+    ul:nth-child(3) {
+        width: 140px;
+        
+        li {
+            background-color: $blue;
+            margin: 5px auto;
+            padding: 5px 0;
+            font-weight: 500;
+
+            &:hover {
+                background-color: $orange;
+            }
+        }
+
+        a {
+            color: white;
+            padding: 2px 0;
+        }
+    }
+}
+
+.ham-tab {
+    text-align: center;
+    background-image: url('/images/sub-nav-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto 38px auto;
+    padding-top: 2px;
+
+    span {
+        width: 50px;
+        height: 5px;
+        color: darkgray;
+    }
+
+    img {
+        width: 25px;
+        height: 25px;
+        margin: 0 auto;
+    }
+
+}
+
+.main-ham-btn {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+@media (min-width: 850px) {
+    .hamburger-wrapper,
+    .ham-icon {
+        display: none;
+    }
+
+    .ham-tab {
+        margin-bottom: 25px;
+    }
+}

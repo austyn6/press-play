@@ -1,0 +1,232 @@
+@use "variables" as *;
+
+.movie-card {
+    background-color: $blue;
+    width: 224px;
+    height: 369px;
+    margin: 0 2rem 0 0;
+    padding: 2px;
+    transition: 0.25s;
+    position: relative;
+    text-align: center;
+    box-shadow: 5px 5px 5px black;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.movie-poster {
+    width: 220px;
+    height: 370px;
+    z-index: 4;
+    img {
+        min-width: 100%;
+        height: 340px;
+        object-fit: cover;
+        margin: 0;
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: left;
+        color: white;
+        width: 500px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+}
+
+.movie-title {
+    padding: 0 0 0 8px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.movie-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    padding: 50px 10px 10px 10px;
+    opacity: 0;
+    transition: .25s ease;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.808), $blue );
+    z-index: 5;
+    
+    h2 {
+        font-size: 21px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: left;
+        color: white;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: left;
+        color: $orange;
+        margin: 0;
+    }
+
+    h4 {
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        margin: 0;
+    }
+
+    p {
+        color: white;
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+.movie-card:hover .movie-overlay{
+    box-shadow: 0 0 15px 4px $green;
+    opacity: 1;
+}
+
+// .movie-card:focus {
+//     box-shadow: 0 0 15px 4px $green;
+// }
+
+.poster-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 25px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto 15px auto;
+    cursor: pointer;
+}
+
+.fav-button,
+.is-favs-icon,
+.add-fav-icon-container,
+.add-fav-display,
+.add-fav-overlay {
+    width: 20px;
+    height: 20px;
+}
+
+.watch-button,
+.is-watch-icon,
+.add-watch-icon-container,
+.add-watch-display,
+.add-watch-overlay {
+    width: 18px;
+    height: 18px;
+}
+
+.add-fav-icon-container,
+.add-watch-icon-container,
+.more-info-icon-container {
+    position: relative;
+}
+
+.more-info-icon-container img {
+    width: 100px;
+    height: auto;
+    background-size: cover;
+}
+
+.add-watch-icon-container img,
+.add-fav-icon-container img {
+    background-size: cover;
+}
+
+.add-fav-display,
+.add-watch-display,
+.more-info-display {
+    display: block;
+}
+
+.add-fav-overlay,
+.add-watch-overlay,
+.more-info-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .25s ease;
+}
+
+.add-fav-icon-container:hover .add-fav-overlay,
+.add-watch-icon-container:hover .add-watch-overlay,
+.more-info-icon-container:hover .more-info-overlay {
+    opacity: 1;
+}
+
+.rating-circle {
+    font-family: 'Khand' Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $blue;
+    border: 2px solid black;
+    position: absolute;
+    left: -15px;
+    top: -23px;
+    box-shadow: 2px 2px 5px black;
+    padding-top: 10px;
+    z-index: 11;
+}
+
+.rating-bar {
+    height: 20px;
+    min-width: 25%;
+    position: absolute;
+    top: -8px;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 33px;
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+
+    span {        
+        background-color: $orange;
+    }
+    img {
+        width: 33px;
+        height: 20px;
+        background-size: cover;
+    }
+}
+
+.is-fav{
+    position: absolute;
+    right: -10px;
+    bottom: -6px;
+    width: 20px;
+    height: 20px;
+    z-index: 15;
+    img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+}
